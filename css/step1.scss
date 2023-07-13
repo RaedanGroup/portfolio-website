@@ -1,0 +1,62 @@
+// Excersice 08: Step 01
+// https://codepen.io/peter-mp/pen/MWzQWoM
+
+$box-padding: 10px;
+$box-radius: 5px;
+$box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+$box-gap: 20px;
+$box-font: sans-serif;
+$box-primary-color: #112055;
+$box-secondary-color: #4f9d92;
+$box-primary-text-color: #fff;
+$box-secondary-text-color: #000;
+
+.box__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: $box-gap;
+    padding: $box-padding;
+    font-family: $box-font;
+
+    %box {
+        padding: $box-padding;
+        border-radius: $box-radius;
+        box-shadow: $box-shadow;
+    }
+
+    .box-primary {
+        @extend %box;
+        background-color: $box-primary-color;
+        color: $box-primary-text-color;
+        &:hover {
+            @extend .box-primary;
+            box-shadow: none;
+        }
+        &-lighter {
+            @extend .box-primary;
+            background-color: lighten($box-primary-color, 20%);
+            &:hover {
+                @extend .box-primary-lighter;
+                box-shadow: none;
+            }
+        }
+        &-darker {
+            @extend .box-primary;
+            background-color: darken($box-primary-color, 20%);
+            &:hover {
+                @extend .box-primary-darker;
+                box-shadow: none;
+            }
+        }
+    }
+    
+    .box-secondary {
+        @extend %box;
+        background-color: $box-secondary-color;
+        color: $box-secondary-text-color;
+        &:hover {
+            @extend .box-secondary;
+            box-shadow: none;
+        }
+    }
+}
