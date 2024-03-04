@@ -79,11 +79,11 @@
   }
   
   a:visited {
-    color: #43125a;
+    color: #ffffff;
   }
   
   a:hover {
-    color: #ee0707;
+    color: #fd3636;
     text-decoration: none;
   }
   
@@ -259,6 +259,61 @@
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+  }
+
+  /* Portfolio Pages */
+
+  .app-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .app-overview {
+    padding-left: 60px;
+    display: block;
+  }
+
+  .app-screenshots {
+    justify-content: center;
+    align-items: top;
+  }
+
+  .screenshot__item {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Centering buttons container */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust gap between buttons */
+    margin-top: 20px; /* Space above the button, adjust as needed */
+  }
+
+  /* Button styling */
+  .portfolio-button {
+    background-color: #6F2F2F;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Interactive states for buttons */
+  .portfolio-button:hover {
+    background-color: #30353B;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .portfolio-button:active {
+    background-color: #7D8179;
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   }
   
   /* Start grid fallback */

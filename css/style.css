@@ -224,7 +224,7 @@
     flex-direction: column;
     text-align: center;
   }
-  
+
   /* Start grid fallback */
   .grid__item {
     display: inline-block;
