@@ -162,6 +162,8 @@
   .navigation-list {
     list-style-type: none;
     font-family: inherit;
+    padding: 0; /* Remove padding around the list */
+    margin: 0; /* Remove margin around the list */
   }
   
   .navigation-list li {
@@ -171,13 +173,26 @@
   
   .navigation-list__item {
     font-family: inherit;
-    color: #ffffff;
+    color: #ffffff; /* Text color */
+    background-color: #6F2F2F; /* Button background color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 20px; /* Add some padding inside the buttons */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .navigation-list__item:hover,
+  .navigation-list__item:focus {
+    background-color: #30353B; /* Change background on hover/focus */
   }
   
   .navigation-list__item--active {
     font-family: inherit;
-    color: cyan;
+    color: #ffffff; /* Active item text color */
+    background-color: #7D8179; /* Active item background color */
+    border: none; /* You might not need this, depends on your design */
   }
+  
   
   .page-header__item {
     -webkit-box-flex: 0;
