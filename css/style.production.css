@@ -74,6 +74,7 @@
   }
   
   /* Link style for each state */
+
   a:link {
     color: #ffffff;
   }
@@ -94,6 +95,7 @@
   a:active {
     color: #1b5812;
   }
+
   
   /* Primary Button style for each state */
   .primary-button {
